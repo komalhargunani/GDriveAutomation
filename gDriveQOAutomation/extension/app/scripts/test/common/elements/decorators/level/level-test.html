@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="level-decorator-test-element" constructor="LevelDecoratorTestElement"></dom-module>
+
+<template id="level-decorator-test-template">
+  <level-decorator-test-element id='testElement'></level-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/level'], function(
+  MixinUtils,
+  QowtElement,
+  Level) {
+  'use strict';
+
+  var api_ = { is: 'level-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, Level, api_));
+
+  return {};
+});
+</script>

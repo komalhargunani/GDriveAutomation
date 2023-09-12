@@ -1,0 +1,10 @@
+URL: https://raw.github.com/LearnBoost/socket.io-client/0.9.16/dist/socket.io.js
+Version: 0.9.16
+License: MIT
+License File: LICENSE
+
+Description:
+Client side socket.io client
+
+Local Modifications:
+None

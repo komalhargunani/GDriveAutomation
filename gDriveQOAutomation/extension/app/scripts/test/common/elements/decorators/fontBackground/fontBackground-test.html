@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="font-background-decorator-test-element" constructor="FontBackgroundDecoratorTestElement"></dom-module>
+
+<template id="font-background-decorator-test-template">
+  <font-background-decorator-test-element id='testElement'></font-background-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/fontBackground'], function(
+  MixinUtils,
+  QowtElement,
+  FontBackground) {
+  'use strict';
+
+  var api_ = { is: 'font-background-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, FontBackground, api_));
+
+  return {};
+});
+</script>

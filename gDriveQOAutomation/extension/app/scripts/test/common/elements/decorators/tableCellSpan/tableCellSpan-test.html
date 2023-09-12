@@ -1,0 +1,29 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="table-cell-span-decorator-test-element"
+                 constructor="TableCellSpanDecoratorTestElement">
+</dom-module>
+
+<template id="table-cell-span-decorator-test-template">
+  <table-cell-span-decorator-test-element id='testElement'>
+  </table-cell-span-decorator-test-element>
+</template>
+
+<script>
+  require([
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement',
+    'common/mixins/decorators/cellColSpan',
+    'common/mixins/decorators/cellRowSpan'], function(
+    MixinUtils,
+    QowtElement,
+    CellColSpan,
+    CellRowSpan) {
+    'use strict';
+
+    var api_ = { is: 'table-cell-span-decorator-test-element' };
+    Polymer(MixinUtils.mergeMixin(
+        QowtElement, CellColSpan, CellRowSpan, api_));
+
+    return {};
+  });
+</script>

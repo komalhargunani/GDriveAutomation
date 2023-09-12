@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../third_party/polymer/polymer.html"/>
+<dom-module id="qowt-point-edit-item"></dom-module>
+
+<template id="qowt-point-edit-item-test-template">
+  <qowt-point-edit-item></qowt-point-edit-item>
+</template>
+
+
+<script>
+require([
+    'common/elements/ui/menuItems/qowt-point-edit-item/qowt-point-edit-item'],
+        function() {
+        'use strict';
+
+        var api_ = {
+            is: 'qowt-point-edit-item',
+            behaviors: [ QowtPointEditItemBehavior ]
+        };
+
+        Polymer(api_);
+
+        return {};
+    });
+</script>

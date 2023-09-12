@@ -1,0 +1,165 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: monospace;
+  font-size: 10pt;
+  overflow: hidden;
+}
+
+#controller {
+  border: 1px solid black;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
+  padding: 5px;
+  padding-bottom: 50px;
+  position: absolute;
+  top: 0px;
+  width: 380px;
+}
+
+#summary {
+  border: 1px solid green;
+  height: 120px;
+  left: 390px;
+  overflow: auto;
+  padding-left: 5px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  white-space: pre;
+}
+
+#passrate {
+  font-size: 24pt;
+  height: 120px;
+  padding-right: 20px;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  top: 0px;
+  width: 100px;
+}
+
+#log {
+  border: 1px solid green;
+  bottom: 0px;
+  left: 390px;
+  overflow: auto;
+  position: absolute;
+  right: 0px;
+  top: 120px;
+}
+
+#controller ul {
+  font-size: 9pt;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+a.run,
+a.run:link,
+a.run:visited {
+  color: blue;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a.run:active,
+a.run:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#test-container {
+  background: rgba(255,255,255,0.5);
+  border: 2px dashed red;
+  bottom: 0px;
+  height: 480px;
+  position: fixed;
+  right: 0px;
+  width: 640px;
+  z-index: 99;
+}
+
+#tester {
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#run-all {
+  color: black;
+  display: block;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 10px;
+}
+
+#run-all:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#debug-label {
+  background: #ffff99;
+  margin: 5px;
+  padding: 10px;
+}
+
+.suite .load {
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.spec-results {
+  background: rgba(200,200,200,0.2);
+  border: 1px dotted gray;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.spec-results h1,
+.spec-results h2,
+.spec-results h3,
+.spec-results h4,
+.spec-results h5,
+.spec-results h6 {
+  margin: 0;
+}
+
+.test-output {
+  border: 1px dotted gray;
+  color: black;
+  padding-left: 30px;
+}
+
+.passed {
+  color: green;
+}
+
+.skipped {
+  color: gray;
+}
+
+.failed {
+  color: red;
+}
+
+.running {
+  font-style: italic;
+}
+
+.msgs {
+  white-space: pre;
+}
+
+.hide {
+  visibility: hidden;
+}
+

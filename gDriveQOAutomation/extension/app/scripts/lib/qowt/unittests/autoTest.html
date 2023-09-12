@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Can't seem to launch the browser with a URL that contains
+      // the question mark, as that gets converted to %3F, which doesn't
+      // work for local files... so implementing this (UGLY) hack gets
+      // us around that...
+      window.location.href = "./indexChrome.html?suite=all"
+    </script>
+  </body>
+</html>

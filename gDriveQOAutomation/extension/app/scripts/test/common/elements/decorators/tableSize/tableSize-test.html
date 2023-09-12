@@ -1,0 +1,29 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="table-size-decorator-test-element"
+                 constructor="TableSizeDecoratorTestElement">
+  <template>
+    <colgroup id="columns"></colgroup>
+  </template>
+</dom-module>
+
+<template id="table-size-decorator-test-template">
+  <table-size-decorator-test-element id='testElement'>
+  </table-size-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/tableSize'], function(
+  MixinUtils,
+  QowtElement,
+  TableSize) {
+  'use strict';
+
+  var api_ = { is: 'table-size-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, TableSize, api_));
+
+  return {};
+});
+</script>

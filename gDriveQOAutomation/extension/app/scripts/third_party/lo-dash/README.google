@@ -1,0 +1,10 @@
+URL: https://raw.github.com/lodash/lodash/2.4.1/dist/lodash.min.js
+Version: 4.5.1
+License: MIT
+License File: LICENSE
+
+Description:
+  Utility library for numerous common javascript tasks
+
+Local Modifications:
+  None

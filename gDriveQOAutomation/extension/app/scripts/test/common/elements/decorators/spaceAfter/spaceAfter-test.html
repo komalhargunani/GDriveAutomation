@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="space-after-decorator-test-element" constructor="SpaceAfterDecoratorTestElement"></dom-module>
+
+<template id="space-after-decorator-test-template">
+  <space-after-decorator-test-element id='testElement'></space-after-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/spaceAfter'], function(
+  MixinUtils,
+  QowtElement,
+  SpaceAfter) {
+  'use strict';
+
+  var api_ = { is: 'space-after-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, SpaceAfter, api_));
+
+  return {};
+});
+</script>

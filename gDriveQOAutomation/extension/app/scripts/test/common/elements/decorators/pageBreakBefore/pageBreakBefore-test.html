@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="page-break-before-decorator-test-element" constructor="PageBreakBeforeDecoratorTestElement"></dom-module>
+
+<template id="page-break-before-decorator-test-template">
+  <page-break-before-decorator-test-element id='testElement'></page-break-before-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/pageBreakBefore'], function(
+  MixinUtils,
+  QowtElement,
+  PageBreakBefore) {
+  'use strict';
+
+  var api_ = { is: 'page-break-before-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, PageBreakBefore, api_));
+
+  return {};
+});
+</script>

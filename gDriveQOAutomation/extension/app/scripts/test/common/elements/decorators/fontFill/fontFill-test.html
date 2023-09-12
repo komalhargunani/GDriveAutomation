@@ -1,0 +1,32 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="font-fill-test-element" constructor="FontFillTestElement"></dom-module>
+
+
+<template id="font-fill-test-template">
+  <font-fill-test-element id='font-fill-test-element'>
+  </font-fill-test-element>
+</template>
+
+<script>
+
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/fontFill'], function(
+    MixinUtils,
+    QowtElement,
+    FontFillDecorator) {
+
+  'use strict';
+
+  var api_ = { is: 'font-fill-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+    QowtElement,
+    FontFillDecorator,
+    api_
+  ));
+
+  return {};
+});
+
+</script>

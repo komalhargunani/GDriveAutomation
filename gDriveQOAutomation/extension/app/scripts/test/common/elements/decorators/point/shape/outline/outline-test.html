@@ -1,0 +1,51 @@
+<link rel="import" href="../../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="outline-test-element">
+    <template>
+        <content></content>
+        <canvas id="outline_canvas"></canvas>
+    </template>
+</dom-module>
+
+
+<template id="outline-test-template">
+    <outline-test-element id='outline-test-element'></outline-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/decorators/point/shape/outline',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'], function(
+            OutlineDecorator,
+            MixinUtils,
+            QowtElement) {
+
+        'use strict';
+
+        var api_ = {
+          is: 'outline-test-element',
+          cascadeProperties_: function() {
+            return {
+              geom: {
+                prst: 88
+              },
+              xfrm: {
+                ext: {
+                  cx:1000,
+                  cy:1000
+                }
+              }
+            };
+          }
+        };
+        Polymer(MixinUtils.mergeMixin(
+            QowtElement,
+            OutlineDecorator,
+            api_
+        ));
+
+        return {};
+    });
+
+</script>

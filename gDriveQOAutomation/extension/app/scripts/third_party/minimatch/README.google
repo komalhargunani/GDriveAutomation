@@ -1,0 +1,45 @@
+*** THE QUICKOFFICE PROJECT (ACQUIRED BY GOOGLE) CURRENTLY REQUIRES ITS OWN
+    COPY OF THIS LIBRARY. DO NOT DEPEND ON THIS PACKAGE. A FUTURE CL IS
+    NEEDED TO REMOVE DUPLICATE DEPENDENCIES AND USE THOSE EXISTING IN
+    GOOGLE3/THIRD_PARTY. ***
+
+URL: https://raw.github.com/isaacs/minimatch/master/minimatch.js
+Version: 72845fa0454d03adf2bb551af35c36835878ff34
+License: MIT
+License File: LICENSE
+
+Description:
+	A minimal matching utility.
+
+Local Modifications:
+	Modified with "node r.js -convert <input> <output" to convert to a RequireJS
+	module.  Also added the following changes.
+
+	-if (!require) {
+	-  require = function (id) {
+	+//if (!require) {
+	+  require_mock = function (id) {
+	     switch (id) {
+	       case "sigmund": return function sigmund (obj) {
+		 return JSON.stringify(obj)
+	       }
+	     }
+	   }
+	-}
+	+//}
+	 
+	 minimatch.Minimatch = Minimatch
+	 
+	-var LRU = require("lru-cache")
+	+var LRU = require_mock("lru-cache")
+	   , cache = minimatch.cache = new LRU({max: 100})
+	   , GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {}
+	-  , sigmund = require("sigmund")
+	+  , sigmund = require_mock("sigmund")
+	 
+	-var path = require("path")
+	+var path = require_mock("path")
+	   // any single thing other than /
+	   // don't need to escape / when using new RegExp()
+	   , qmark = "[^/]"
+

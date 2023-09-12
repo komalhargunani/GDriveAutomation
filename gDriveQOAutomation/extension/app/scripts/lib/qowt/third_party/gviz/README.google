@@ -1,0 +1,16 @@
+URL: /google3/javascript/gviz/devel/jsapi
+Version: 74233105
+License: Google-Authored Code
+License File: LICENSE
+
+Description:
+  Google visualization JavaScript library.
+
+Local Modifications:
+  Renamed jsapi_debug_corechart_module.js gviz_corechart_module.js
+  Renamed jsapi_debug_default_module.js gviz_default_module.js
+  Renamed jsapi_debug_ui_module.js gviz_ui_module.js
+  Renamed jsapi_debug_format_module.js gviz_format_module.js
+
+  Further changes documented in speclet: "qowtDocumentation/speclets/charts/
+  Updating GViz library.markdown"

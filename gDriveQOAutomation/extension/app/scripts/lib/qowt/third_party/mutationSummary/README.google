@@ -1,0 +1,12 @@
+URL: https://mutation-summary.googlecode.com/git-history/9ec0324e5aeb/mutation_summary.js
+Version: 9ec0324e5aeb
+License: Apache 2.0
+License File: LICENSE
+
+Description:
+  A JavaScript library that makes observing changes to the DOM easy
+
+Local Modifications:
+  The Quickoffice project (acquired by Google) currently requires its own copy
+  of this library. A future CL is needed to remove duplicate dependencies and
+  use those existing in google3/third_party.

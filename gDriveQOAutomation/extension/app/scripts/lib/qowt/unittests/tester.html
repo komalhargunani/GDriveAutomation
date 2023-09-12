@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>QOWT Unit Test iFrame</title>
+    <script src="../../../third_party/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../third_party/requirejs/require.js"></script>
+    <script src="../../../../scripts/configs/requirejsConfig.js"></script>
+    <script type="text/javascript" src="../third_party/jasmine/jasmine-1.2.0-patched.js"></script>
+    <script type="text/javascript" src="../utils/jasmineUtils.js"></script>
+
+    <!-- load polymer and all polymer elements -->
+    <link rel="import" href="../../../third_party/polymer/polymer.html"/>
+    <link rel="import" href="../../../common/elements/ui/polymerCoreDepsVulcanized.html"/>
+    <link rel="import" href="../../../common/elements/all.html"/>
+
+    <script type="text/javascript">
+      window._unittests = true;
+      HTMLImports.whenReady(function () {
+        require.config({
+          baseUrl: "../../../../scripts",
+          deps: [
+            'qowtRoot/lib/framework/framework',
+            'third_party/lo-dash/lo-dash.min'
+          ]
+        });
+        require([
+          'qowtRoot/third_party/domready/domReady!',
+          'common/elements/all'], function() {
+            require(["unitTestRoot/tester"]);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    tester
+  </body>
+</html>

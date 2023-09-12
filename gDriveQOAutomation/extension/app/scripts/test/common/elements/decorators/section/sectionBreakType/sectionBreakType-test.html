@@ -1,0 +1,30 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="section-break-type-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="section-break-type-decorator-test-template">
+    <qowt-page id='page'>
+        <qowt-section id='section-test-element'>
+        </qowt-section>
+    </qowt-page>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/sectionBreakType',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(SectionBreakType, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'section-break-type-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(
+                    QowtElement, SectionBreakType, api_));
+
+                return {};
+            });
+</script>

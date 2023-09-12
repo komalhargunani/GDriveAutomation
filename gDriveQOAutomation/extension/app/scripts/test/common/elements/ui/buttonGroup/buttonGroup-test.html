@@ -1,0 +1,18 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="button-group-test-element"></dom-module>
+
+<script>
+require([
+  'common/elements/ui/buttonGroup/buttonGroup'], function() {
+  'use strict';
+
+  var api_ = {
+    is: 'button-group-test-element',
+    behaviors: [ QowtButtonGroupBehavior ]
+  };
+
+  window.QowtButtonGroupTestElement = Polymer(api_);
+
+  return {};
+});
+</script>

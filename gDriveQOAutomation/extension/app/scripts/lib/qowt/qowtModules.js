@@ -1,0 +1,23 @@
+define([
+  'qowtRoot/variants/base',
+  'qowtRoot/api/_all',
+  'qowtRoot/appNotifications/_all',
+  'qowtRoot/comms/request',
+  'qowtRoot/contentMgrs/_all',
+  'qowtRoot/controls/_all',
+  'qowtRoot/dcp/dcpHandlersManifest',
+  'qowtRoot/dcp/dcpManager',
+  'qowtRoot/dcp/decorators/_all',
+  'qowtRoot/onboarding/common/onboardingDialogHandler',
+  'qowtRoot/onboarding/common/shortcutUpdateDialogPublisher',
+  'qowtRoot/presentation/_all',
+  'qowtRoot/models/qowtState',
+  'qowtRoot/drawing/_all',
+  'qowtRoot/events/_all',
+  'qowtRoot/savestate/_all',
+  'qowtRoot/selection/_all',
+  'qowtRoot/tools/toolManager',
+  'qowtRoot/tools/_all',
+  'qowtRoot/widgets/_all',
+  'qowtRoot/utils/_all'
+  ], function() {});

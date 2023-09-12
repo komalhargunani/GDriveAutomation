@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="emboss-decorator-test-element" constructor="EmbossTextDecoratorTestElement"></dom-module>
+
+<template id="emboss-decorator-test-template">
+  <emboss-decorator-test-element id='testElement'></emboss-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/embossText'], function(
+  MixinUtils,
+  QowtElement,
+  EmbossText) {
+  'use strict';
+
+  var api_ = { is: 'emboss-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, EmbossText, api_));
+
+  return {};
+});
+</script>

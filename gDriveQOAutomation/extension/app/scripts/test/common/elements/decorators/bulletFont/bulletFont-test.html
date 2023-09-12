@@ -1,0 +1,60 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="bullet-font-test-element" constructor="BulletFontTestElement">
+    <template>
+        <style>
+  /* For follow rules */
+  :host:before {
+    @apply(--follow-bullet-style);
+  }
+
+  /* Bullet styling */
+  :host:before {
+    @apply(--bullet-style);
+  }
+
+  /* For auto bullets only - override some values */
+  :host(.list-type-buAuto):before {
+    @apply(--auto-bullet-style);
+  }
+        </style>
+        <content></content>
+    </template>
+</dom-module>
+
+
+<template id="bullet-font-test-template">
+    <style>
+        bullet-font-test-element:before{
+            font-family: 'Calibri';
+        }
+    </style>
+    <bullet-font-test-element id='bullet-font-test-element'>
+    </bullet-font-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement',
+        'common/mixins/decorators/bulletFont',
+        'common/mixins/text/firstRunObserver'], function(
+            MixinUtils,
+            QowtElement,
+            BulletFontDecorator,
+            FirstRunObserver) {
+
+        'use strict';
+
+        var api_ = { is: 'bullet-font-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                BulletFontDecorator,
+                FirstRunObserver,
+                api_
+        ));
+
+        return {};
+    });
+
+</script>

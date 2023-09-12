@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module name="crop-image-decorator-test-element"
+                 constructor="CropImageDecoratorTestElement"></dom-module>
+
+<template id="crop-image-decorator-test-template">
+  <crop-image-decorator-test-element
+      id='testElement'></crop-image-decorator-test-element>
+</template>
+
+<script>
+  require([
+    'common/mixins/decorators/cropImage',
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement'
+  ], function(CropImage, MixinUtils, QowtElement) {
+
+    'use strict';
+
+    var _api = {is: 'crop-image-decorator-test-element'};
+    Polymer(MixinUtils.mergeMixin(QowtElement, CropImage, _api));
+
+    return {};
+  });
+</script>

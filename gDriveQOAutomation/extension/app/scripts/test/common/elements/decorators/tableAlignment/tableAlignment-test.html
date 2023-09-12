@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="table-alignment-decorator-test-element" constructor="TableAlignmentDecoratorTestElement"></dom-module>
+
+<template id="table-alignment-decorator-test-template">
+  <table-alignment-decorator-test-element id='testElement'></table-alignment-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/tableAlignment'], function(
+  MixinUtils,
+  QowtElement,
+  TableAlignment) {
+  'use strict';
+
+  var api_ = { is: 'table-alignment-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, TableAlignment, api_));
+
+  return {};
+});
+</script>

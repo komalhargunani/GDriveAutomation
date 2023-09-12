@@ -1,0 +1,51 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="decorator-base-test-element" constructor="DecoratorBaseTestElement"></dom-module>
+
+<template id="decorator-base-test-template">
+  <decorator-base-test-element flow></decorator-base-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/flowingElement',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/decoratorBase'], function(
+  MixinUtils,
+  FlowingElement,
+  QowtElement,
+  DecoratorBase) {
+  'use strict';
+
+  // Create a fake decorator
+  var FakeDecorator = MixinUtils.mergeMixin(DecoratorBase, {
+    supports_: ['foo'],
+    set foo(val) {
+      if (val) {
+        this.setAttribute('foo', val);
+      } else {
+        this.removeAttribute('foo');
+      }
+    }
+  });
+
+  // Create a different fake decorator
+  var SecondDecorator = MixinUtils.mergeMixin(DecoratorBase, {
+    supports_: ['eggs'],
+    set eggs(val) {
+      if (val) {
+        this.setAttribute('eggs', val);
+      } else {
+        this.removeAttribute('eggs');
+      }
+    }
+  });
+
+  var api_ = { is: 'decorator-base-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement,
+    FlowingElement, FakeDecorator, SecondDecorator, api_
+  ));
+
+  return {};
+});
+</script>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="engrave-decorator-test-element" constructor="EngraveTextDecoratorTestElement"></dom-module>
+
+<template id="engrave-decorator-test-template">
+  <engrave-decorator-test-element id='testElement'></engrave-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/engraveText'], function(
+  MixinUtils,
+  QowtElement,
+  EngraveText) {
+  'use strict';
+
+  var api_ = { is: 'engrave-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, EngraveText, api_));
+
+  return {};
+});
+</script>

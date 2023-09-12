@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="subscript-decorator-test-element" constructor="SubscriptDecoratorTestElement"></dom-module>
+
+<template id="subscript-decorator-test-template">
+  <subscript-decorator-test-element id='testElement'></subscript-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/subscriptText'], function(
+  MixinUtils,
+  QowtElement,
+  Subscript) {
+  'use strict';
+
+  var api_ = { is: 'subscript-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, Subscript, api_));
+
+  return {};
+});
+</script>

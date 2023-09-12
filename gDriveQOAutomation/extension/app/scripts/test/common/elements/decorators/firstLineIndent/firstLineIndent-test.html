@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="first-line-indent-decorator-test-element" constructor="FirstLineIndentDecoratorTestElement"></dom-module>
+
+<template id="first-line-indent-decorator-test-template">
+  <first-line-indent-decorator-test-element id='testElement'></first-line-indent-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/firstLineIndent'], function(
+  MixinUtils,
+  QowtElement,
+  FirstLineIndent) {
+  'use strict';
+
+  var api_ = { is: 'first-line-indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, FirstLineIndent, api_));
+
+  return {};
+});
+</script>

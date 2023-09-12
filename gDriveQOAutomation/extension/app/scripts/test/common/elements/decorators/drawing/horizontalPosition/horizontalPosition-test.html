@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="horizontal-position-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="horizontal-position-decorator-test-template">
+    <horizontal-position-decorator-test-element
+            id='horizontal-pos-test-element'>
+    </horizontal-position-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/horizontalPosition',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(HorizontalPosition, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = { is: 'horizontal-position-decorator-test-element' };
+          Polymer(MixinUtils.mergeMixin(QowtElement, HorizontalPosition, api_));
+
+          return {};
+        });
+</script>

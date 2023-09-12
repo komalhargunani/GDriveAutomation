@@ -1,0 +1,52 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="bullet-test-element" constructor="BulletTestElement">
+<template>
+        <style>
+  /* For follow rules */
+  :host:before {
+    @apply(--follow-bullet-style);
+  }
+
+  /* Bullet styling */
+  :host:before {
+    @apply(--bullet-style);
+  }
+
+  /* For auto bullets only - override some values */
+  :host(.list-type-buAuto):before {
+    @apply(--auto-bullet-style);
+  }
+        </style>
+        <content></content>
+</template>
+</dom-module>
+
+
+<template id="bullet-test-template">
+  <bullet-test-element id='bullet-test-element'>
+  </bullet-test-element>
+</template>
+
+<script>
+
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/bullet'], function(
+    MixinUtils,
+    QowtElement,
+    BulletDecorator) {
+
+  'use strict';
+
+  var api_ = { is: 'bullet-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+    QowtElement,
+    BulletDecorator,
+    api_
+  ));
+
+  return {};
+});
+
+</script>

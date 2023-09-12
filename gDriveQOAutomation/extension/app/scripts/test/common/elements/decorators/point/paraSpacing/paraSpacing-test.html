@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="point-para-spacing-decorator-test-element"
+                 constructor="PointParaSpacingDecoratorTestElement">
+</dom-module>
+
+<template id="point-para-spacing-decorator-test-template">
+    <point-para-spacing-decorator-test-element id='testElement'>
+    </point-para-spacing-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/point/paraSpacing',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+         function(ParaSpacing, MixinUtils, QowtElement) {
+            'use strict';
+
+            var api_ = {
+                is: 'point-para-spacing-decorator-test-element',
+                maxParaFontSize: 18
+            };
+
+            Polymer(MixinUtils.mergeMixin(ParaSpacing, QowtElement, api_));
+
+            return {};
+         });
+</script>

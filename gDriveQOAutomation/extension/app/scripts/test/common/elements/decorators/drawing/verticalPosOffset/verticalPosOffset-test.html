@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="vertical-pos-offset-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="vertical-pos-offset-decorator-test-template">
+    <vertical-pos-offset-decorator-test-element
+            id='vertical-pos-offset-test-element'>
+    </vertical-pos-offset-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/verticalPosOffset',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(VerticalPosOffset, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = { is: 'vertical-pos-offset-decorator-test-element' };
+          Polymer(MixinUtils.mergeMixin(QowtElement, VerticalPosOffset, api_));
+
+          return {};
+        });
+</script>

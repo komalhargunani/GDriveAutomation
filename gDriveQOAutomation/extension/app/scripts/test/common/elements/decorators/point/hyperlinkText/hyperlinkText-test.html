@@ -1,0 +1,36 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="hyperlink-test-element" constructor="HyperlinkTestElement">
+    <template>
+        <style id='hyperlinkStyle'></style><content></content>
+    </template>
+</dom-module>
+
+
+<template id="hyperlink-test-template">
+    <hyperlink-test-element id='hyperlink-test-element'>
+    </hyperlink-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/decorators/point/hyperlinkText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'], function(
+            PointHyperlinkTextDecorator,
+            MixinUtils,
+            QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'hyperlink-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                PointHyperlinkTextDecorator,
+                api_
+        ));
+
+        return {};
+    });
+
+</script>

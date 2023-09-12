@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="font-size-decorator-test-element" constructor="FontSizeDecoratorTestElement"></dom-module>
+
+<template id="font-size-decorator-test-template">
+  <font-size-decorator-test-element id='testElement'></font-size-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/fontSize'], function(
+  MixinUtils,
+  QowtElement,
+  FontSize) {
+  'use strict';
+
+  var api_ = { is: 'font-size-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, FontSize, api_));
+
+  return {};
+});
+</script>

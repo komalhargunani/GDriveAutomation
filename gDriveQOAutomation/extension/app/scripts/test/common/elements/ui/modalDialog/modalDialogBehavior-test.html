@@ -1,0 +1,25 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+
+<dom-module id="modal-dialog-test-element"></dom-module>
+
+<template id="modal-dialog-test-template">
+    <dialog is="modal-dialog-test-element"></dialog>
+</template>
+
+<script>
+require([
+  'common/elements/ui/modalDialog/modalDialog'
+], function(
+  /* ModalDialogBehavior */
+) {
+  'use strict';
+
+    Polymer({
+        is: 'modal-dialog-test-element',
+        extends: 'dialog',
+        behaviors: [ QowtModalDialogBehavior ]
+    });
+
+  return {};
+});
+</script>

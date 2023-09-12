@@ -1,0 +1,34 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="section-borders-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="section-borders-decorator-test-template">
+    <qowt-page id='page'>
+        <template>
+            <div id="pageBorders"></div>
+        </template>
+        <qowt-section id='section-test-element'>
+        </qowt-section>
+    </qowt-page>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/sectionBorders',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(SectionBorders, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'section-borders-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(QowtElement,
+                        SectionBorders,
+                        api_));
+
+                return {};
+            });
+</script>

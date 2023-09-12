@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-12T09:35:19Z" name="Default suite" finished-at="2022-07-12T09:42:06Z" duration-ms="407543">
+    <groups>
+    </groups>
+    <test started-at="2022-07-12T09:35:19Z" name="Default test" finished-at="2022-07-12T09:42:06Z" duration-ms="407543">
+      <class name="com.automation.testcases.word.DocHomeWordFileTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:05:19Z" name="setup" finished-at="2022-07-12T15:07:54Z" duration-ms="154763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyModuleIconWordFile(java.lang.String)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:07:54Z" name="verifyModuleIconWordFile" data-provider="word-files" finished-at="2022-07-12T15:08:58Z" duration-ms="64129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QW_BAT_superdoc.doc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModuleIconWordFile -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:08:58Z" name="tearDown" finished-at="2022-07-12T15:09:02Z" duration-ms="4569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyModuleIconWordFile status=SUCCESS method=DocHomeWordFileTest.verifyModuleIconWordFile(java.lang.String)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:09:02Z" name="setup" finished-at="2022-07-12T15:10:05Z" duration-ms="62953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyModuleIconWordFile(java.lang.String)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:10:05Z" name="verifyModuleIconWordFile" data-provider="word-files" finished-at="2022-07-12T15:12:06Z" duration-ms="120930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QW_BAT_superdoc.docx]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModuleIconWordFile -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a]" started-at="2022-07-12T15:12:06Z" name="tearDown" finished-at="2022-07-12T15:12:06Z" duration-ms="182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyModuleIconWordFile status=SUCCESS method=DocHomeWordFileTest.verifyModuleIconWordFile(java.lang.String)[pri:0, instance:com.automation.testcases.word.DocHomeWordFileTest@644baf4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.testcases.word.DocHomeWordFileTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,40 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html">
+<dom-module id="flow-children-test-element" constructor="FlowChildrenTestElement"></dom-module>
+
+<template id="flow-children-mixin-test-template">
+  <div id="container" style="width:100px;height:100px;border:1px solid black;">
+    <flow-children-test-element style="display:block;" flow-children>
+      <span id="s1">foo </span><span id="s2">foo </span><span id="s3">foo </span>
+      <span id="s4">foo </span><span id="s5">foo </span><span id="s6">foo </span>
+      <span id="s7">foo </span><span id="s8">foo </span><span id="s9">foo </span>
+      <span id="s10">foo </span><span id="s11">foo </span><span id="s12">foo </span>
+      <span id="s13">foo </span><span id="s14">foo </span><span id="s15">foo </span>
+      <span id="s16">foo </span><span id="s17">foo </span><span id="s18">foo </span>
+      <span id="s19">foo </span><span id="s20">foo </span><span id="s21">foo </span>
+      <span id="s22">foo </span><span id="s23">foo </span><span id="s24">foo </span>
+      <span id="s25">foo </span><span id="s26">foo </span><span id="s27">foo </span>
+      <span id="s28">foo </span><span id="s29">foo </span><span id="s30">foo </span>
+      <span id="s31">foo </span><span id="s32">foo </span><span id="s33">foo </span>
+      <span id="s34">foo </span><span id="s35">foo </span><span id="s36">foo </span>
+      <span id="s37">foo </span><span id="s38">foo </span><span id="s39">foo </span>
+      <span id="s40">foo </span><span id="s41">foo </span><span id="s42">foo </span>
+    </flow-children-test-element>
+  </div>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/flowChildren'], function(
+  MixinUtils,
+  QowtElement,
+  FlowChildren) {
+  'use strict';
+
+  var api_ = { is: 'flow-children-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, FlowChildren, api_));
+
+  return {};
+});
+</script>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="allcaps-decorator-test-element" constructor="AllcapsDecoratorTestElement"></dom-module>
+
+<template id="allcaps-decorator-test-template">
+  <allcaps-decorator-test-element id='testElement'></allcaps-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/allCapsText'], function(
+  MixinUtils,
+  QowtElement,
+  Allcaps) {
+  'use strict';
+
+  var api_ = { is: 'allcaps-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, Allcaps, api_));
+
+  return {};
+});
+</script>

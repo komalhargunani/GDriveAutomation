@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="right-margin-decorator-test-element" constructor="RightMarginDecoratorTestElement"></dom-module>
+
+<template id="right-margin-decorator-test-template">
+  <right-margin-decorator-test-element id='testElement'></right-margin-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/rightMargin'], function(
+  MixinUtils,
+  QowtElement,
+  RightMargin) {
+  'use strict';
+
+  var api_ = { is: 'right-margin-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, RightMargin, api_));
+
+  return {};
+});
+</script>

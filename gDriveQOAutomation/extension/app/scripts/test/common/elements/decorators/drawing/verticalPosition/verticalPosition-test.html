@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="vertical-position-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="vertical-position-decorator-test-template">
+    <vertical-position-decorator-test-element
+            id='vertical-pos-test-element'>
+    </vertical-position-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/verticalPosition',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(VerticalPosition, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = { is: 'vertical-position-decorator-test-element' };
+          Polymer(MixinUtils.mergeMixin(QowtElement, VerticalPosition, api_));
+
+          return {};
+        });
+</script>

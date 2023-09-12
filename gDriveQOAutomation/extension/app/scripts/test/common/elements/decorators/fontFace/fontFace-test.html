@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="font-face-decorator-test-element" constructor="FontFaceDecoratorTestElement"></dom-module>
+
+<template id="font-face-decorator-test-template">
+  <font-face-decorator-test-element id='testElement'></font-face-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/fontFace'], function(
+  MixinUtils,
+  QowtElement,
+  FontFace) {
+  'use strict';
+
+  var api_ = { is: 'font-face-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, FontFace, api_));
+
+  return {};
+});
+</script>

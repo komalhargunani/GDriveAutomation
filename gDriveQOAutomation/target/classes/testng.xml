@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Gdrive and QO Test Automation Suite">
+
+	<test name="Gdrive Test Cases">
+		<packages>
+      		<package name="com.automation.testcases" />
+   		</packages>
+   		 	
+        <classes>
+				<class name="com.automation.testcases.word.FileUsingOCMSaveAsGoogleDocTest"></class>
+		</classes> 
+
+	 <!-- 	 <classes>
+	 	
+			<class name="com.automation.testcases.common.WelcomeDialogTest"></class>
+			<class name="com.automation.testcases.word.DocHomeWordFileTest"></class>
+			<class name="com.automation.testcases.word.GdriveShareWordFileTest"></class>
+			<class name="com.automation.testcases.word.QOHomeWordFileTest"></class>
+			<class name="com.automation.testcases.word.SaveAfterEditWordFileTest"></class>
+			<class name="com.automation.testcases.word.OpenWordDriveFileUsingContextMenuTest"></class>
+			<class name="com.automation.testcases.word.FileSaveAsGoogleDocTest"></class>
+			<class name="com.automation.testcases.word.FileUsingOCMSaveAsGoogleDocTest"></class>
+			<class name="com.automation.testcases.point.PointHomePointFileTest"></class>
+			<class name="com.automation.testcases.point.GdriveSharePointFileTest"></class>
+			<class name="com.automation.testcases.point.QOHomePointFileTest"></class>
+			<class name="com.automation.testcases.point.SaveAfterEditPointFileTest"></class>
+			<class name="com.automation.testcases.point.OpenPointDriveFileUsingContextMenuTest"></class>
+			<class name="com.automation.testcases.point.FileSaveAsGoogleSlideTest"></class>
+			<class name="com.automation.testcases.point.FileUsingOCMSaveAsGoogleSlideTest"></class>
+			<class name="com.automation.testcases.sheet.SheetHomeSheetFileTest"></class>
+			<class name="com.automation.testcases.sheet.GdriveShareSheetFileTest"></class>
+			<class name="com.automation.testcases.sheet.QOHomeSheetFileTest"></class>
+			<class name="com.automation.testcases.sheet.SaveAfterEditSheetFileTest"></class>
+			<class name="com.automation.testcases.sheet.OpenSheetDriveFileUsingContextMenuTest"></class>
+			<class name="com.automation.testcases.sheet.FileSaveAsGoogleSheetTest"></class>
+			<class name="com.automation.testcases.sheet.FileUsingOCMSaveAsGoogleSheetTest"></class>
+			
+			
+		</classes> -->
+ 
+	</test>
+</suite>

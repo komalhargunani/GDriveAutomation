@@ -1,0 +1,27 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="different-first-page-decorator-test-element">
+  <template>
+    <content></content>
+  </template>
+</dom-module>
+
+<template id="different-first-page-decorator-test-template">
+  <qowt-section id='section-test-element'>
+  </qowt-section>
+</template>
+
+<script>
+  require([
+    'common/mixins/decorators/differentFirstPage',
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement'],
+      function(DifferentFirstPage, MixinUtils, QowtElement) {
+
+        'use strict';
+
+        var api_ = { is:'different-first-page-decorator-test-element' };
+        Polymer(MixinUtils.mergeMixin(QowtElement, DifferentFirstPage, api_));
+
+        return {};
+      });
+</script>

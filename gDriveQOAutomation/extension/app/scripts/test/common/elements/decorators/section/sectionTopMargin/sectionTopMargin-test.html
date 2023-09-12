@@ -1,0 +1,41 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="section-top-margin-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="section-top-margin-decorator-test-template">
+    <qowt-page id='page'>
+        <template>
+            <qowt-header id="header"></qowt-header>
+            <div id="contentsContainer" contenteditable="true">
+                <div id="contents">
+                    <content></content>
+                </div>
+            </div>
+            <qowt-footer id="footer"></qowt-footer>
+        </template>
+        <qowt-section id='section-test-element'>
+        </qowt-section>
+    </qowt-page>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/sectionTopMargin',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(SectionTopMargin, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'section-top-margin-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(
+                    QowtElement,
+                    SectionTopMargin,
+                    api_));
+
+                return {};
+            });
+</script>

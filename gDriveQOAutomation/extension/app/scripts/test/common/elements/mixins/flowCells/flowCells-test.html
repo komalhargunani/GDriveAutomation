@@ -1,0 +1,34 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html">
+<dom-module id="flow-children-as-cells" constructor="FlowChildrenAsCells"></dom-module>
+<dom-module id="flow-children-as-elements" constructor="FlowChildrenAsElements"></dom-module>
+
+<template id="flow-cells-mixin-test-template">
+  <div id="container" style="height:30px;border:1px solid black;">
+    <flow-children-as-cells style="display:block;" flow-cells>
+      <flow-children-as-elements style="display:inline-block;width:100px;" flow-children>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+      </flow-children-as-elements>
+      <flow-children-as-elements style="display:inline-block;width:100px;" flow-children>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+      </flow-children-as-elements>
+      <flow-children-as-elements style="display:inline-block;width:100px;" flow-children>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+        <div><span>foo</span><span>foo</span><span>foo</span></div>
+      </flow-children-as-elements>
+    </flow-children-as-cells>
+  </div>
+</template>

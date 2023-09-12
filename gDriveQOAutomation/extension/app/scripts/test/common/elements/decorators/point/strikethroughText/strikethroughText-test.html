@@ -1,0 +1,36 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="strike-test-element" constructor="StrikeTestElement">
+    <template>
+        <style id='strikeStyle'></style><content></content>
+    </template>
+</dom-module>
+
+
+<template id="strike-test-template">
+    <strike-test-element id='strike-test-element'>
+    </strike-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/decorators/point/strikethroughText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'], function(
+            PointStrikethroughDecorator,
+            MixinUtils,
+            QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'strike-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                PointStrikethroughDecorator,
+                api_
+        ));
+
+        return {};
+    });
+
+</script>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="bold-decorator-test-element" constructor="BoldDecoratorTestElement"></dom-module>
+
+<template id="bold-decorator-test-template">
+  <bold-decorator-test-element id='testElement'></bold-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/boldText'], function(
+  MixinUtils,
+  QowtElement,
+  BoldText) {
+  'use strict';
+
+  var api_ = { is: 'bold-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, BoldText, api_));
+
+  return {};
+});
+</script>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="shadow-text-decorator-test-element" constructor="ShadowTextDecoratorTestElement"></dom-module>
+
+<template id="shadow-text-decorator-test-template">
+  <shadow-text-decorator-test-element id='testElement'></shadow-text-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/shadowText'], function(
+  MixinUtils,
+  QowtElement,
+  ShadowText) {
+  'use strict';
+
+  var api_ = { is: 'shadow-text-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, ShadowText, api_));
+
+  return {};
+});
+</script>

@@ -1,0 +1,26 @@
+<link rel="import" href="../../../../third_party/polymer/polymer.html"/>
+<dom-module id="custom-selector-test-element" constructor="CustomSelectorTestElement"></dom-module>
+
+<template id="custom-selector-test-template">
+  <custom-selector-test-element id="root">
+    <custom-selector-test-element id="atom">atom</custom-selector-test-element>
+    <custom-selector-test-element id="ball">ball</custom-selector-test-element>
+    <custom-selector-test-element id="coat">coat</custom-selector-test-element>
+    <custom-selector-test-element id="desk">desk</custom-selector-test-element>
+  </custom-selector-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement'], function(
+  MixinUtils,
+  QowtElement) {
+  'use strict';
+
+  var api_ = { is: 'custom-selector-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, api_));
+
+  return {};
+});
+</script>

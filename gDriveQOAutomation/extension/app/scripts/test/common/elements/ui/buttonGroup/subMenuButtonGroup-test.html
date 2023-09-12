@@ -1,0 +1,18 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="sub-menu-button-group-test-element"></dom-module>
+
+<script>
+  require([
+    'common/elements/ui/buttonGroup/subMenuButtonGroup'], function() {
+    'use strict';
+
+    var api_ = {
+      is: 'sub-menu-button-group-test-element',
+      behaviors: [QowtSubMenuButtonGroupBehavior]
+    };
+
+    window.QowtSubMenuButtonGroupTestElement = Polymer(api_);
+
+    return {};
+  });
+</script>

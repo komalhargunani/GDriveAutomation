@@ -1,0 +1,15 @@
+*** THE QUICKOFFICE PROJECT (ACQUIRED BY GOOGLE) CURRENTLY REQUIRES ITS OWN
+    COPY OF THIS LIBRARY. DO NOT DEPEND ON THIS PACKAGE. A FUTURE CL IS
+    NEEDED TO REMOVE DUPLICATE DEPENDENCIES AND USE THOSE EXISTING IN
+    GOOGLE3/THIRD_PARTY. ***
+
+URL: http://requirejs.org/docs/release/2.1.10/minified/require.js
+Version: 2.10.1
+License: MIT (and dual license under “New” BSD)
+License File: LICENSE
+
+Description:
+	RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.
+
+Local Modifications:
+	None

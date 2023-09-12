@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="background-color-decorator-test-element" constructor="BackgroundColorDecoratorTestElement"></dom-module>
+
+<template id="background-color-decorator-test-template">
+  <background-color-decorator-test-element id='testElement'></background-color-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/backgroundColor'], function(
+  MixinUtils,
+  QowtElement,
+  BackgroundColor) {
+  'use strict';
+
+  var api_ = { is: 'background-color-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, BackgroundColor, api_));
+
+  return {};
+});
+</script>

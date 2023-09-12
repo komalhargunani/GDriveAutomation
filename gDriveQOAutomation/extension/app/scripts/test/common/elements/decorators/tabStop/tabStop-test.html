@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module name="tab-stop-decorator-test-element"
+    constructor="TabStopTestElement"></dom-module>
+
+<template id="tab-stop-decorator-test-template">
+  <p is="qowt-word-para" qowt-paratype="hf-para" id='testElement'>
+    <span is="qowt-word-run" qowt-runtype="qowt-tab" qowt-eid="E10" id="E10"></span></p>
+</template>
+
+<script>
+    require([
+      'common/mixins/decorators/tabStop',
+      'common/mixins/mixinUtils',
+      'common/mixins/qowtElement'],
+        function(TabStop, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var _api = { is: 'tab-stop-decorator-test-element'};
+          Polymer(MixinUtils.mergeMixin(QowtElement, TabStop, _api));
+
+            return {};
+          });
+</script>

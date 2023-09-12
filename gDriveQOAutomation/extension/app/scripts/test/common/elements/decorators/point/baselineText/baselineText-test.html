@@ -1,0 +1,36 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="baseline-test-element" constructor="BaselineTestElement">
+    <template>
+        <style id='baselineStyle'></style><content></content>
+    </template>
+</dom-module>
+
+
+<template id="baseline-test-template">
+    <baseline-test-element id='baseline-test-element'>
+    </baseline-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/decorators/point/baselineText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'], function(
+            PointBaselineTextDecorator,
+            MixinUtils,
+            QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'baseline-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                PointBaselineTextDecorator,
+                api_
+        ));
+
+        return {};
+    });
+
+</script>

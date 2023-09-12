@@ -1,0 +1,22 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="base-button-test-element"></dom-module>
+
+<template id="base-button-test-template">
+  <base-button-test-element id='testElement'></base-button-test-element>
+</template>
+
+<script>
+require([
+  'common/elements/ui/baseButton/baseButton'], function() {
+  'use strict';
+
+  var api_ = {
+    is: 'base-button-test-element',
+    behaviors: [ QowtBaseButtonBehavior ]
+  };
+
+  Polymer(api_);
+
+  return {};
+});
+</script>

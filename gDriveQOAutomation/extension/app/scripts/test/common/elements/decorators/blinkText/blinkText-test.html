@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="blink-text-decorator-test-element" constructor="BlinkTextDecoratorTestElement"></dom-module>
+
+<template id="blink-text-decorator-test-template">
+  <blink-text-decorator-test-element id='testElement'></blink-text-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/blinkText'], function(
+  MixinUtils,
+  QowtElement,
+  BlinkTextDecorator) {
+  'use strict';
+
+  var api_ = {is: 'blink-text-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, BlinkTextDecorator, api_));
+
+  return {};
+});
+</script>

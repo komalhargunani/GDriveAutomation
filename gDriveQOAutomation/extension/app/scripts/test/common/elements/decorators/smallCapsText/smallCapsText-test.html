@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="small-caps-text-decorator-test-element" constructor="SmallCapsTextDecoratorTestElement"></dom-module>
+
+<template id="small-caps-text-decorator-test-template">
+  <small-caps-text-decorator-test-element id='testElement'></small-caps-text-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/smallCapsText'], function(
+  MixinUtils,
+  QowtElement,
+  SmallCapsText) {
+  'use strict';
+
+  var api_ = { is: 'small-caps-text-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, SmallCapsText, api_));
+
+  return {};
+});
+</script>

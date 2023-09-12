@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="superscript-decorator-test-element" constructor="SuperscriptDecoratorTestElement"></dom-module>
+
+<template id="superscript-decorator-test-template">
+  <superscript-decorator-test-element id='testElement'></superscript-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/superscriptText'], function(
+  MixinUtils,
+  QowtElement,
+  Superscript) {
+  'use strict';
+
+  var api_ = { is: 'superscript-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, Superscript, api_));
+
+  return {};
+});
+</script>

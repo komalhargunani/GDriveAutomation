@@ -1,0 +1,26 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="left-and-hanging-indent-decorator-test-element" constructor="LeftAndHangingIndentDecoratorTestElement"></dom-module>
+
+<template id="left-and-hanging-indent-decorator-test-template">
+  <left-and-hanging-indent-decorator-test-element id='testElement'></left-and-hanging-indent-decorator-test-element>
+</template>
+
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/leftIndent',
+  'common/mixins/decorators/hangingIndent'], function(
+  MixinUtils,
+  QowtElement,
+  LeftIndent,
+  HangingIndent) {
+  'use strict';
+
+  var api_ = { is: 'left-and-hanging-indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, LeftIndent, HangingIndent, api_));
+
+  return {};
+});
+</script>

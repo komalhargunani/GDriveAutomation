@@ -1,0 +1,29 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="page-height-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="page-height-decorator-test-template">
+    <qowt-page id='page'>
+        <qowt-section id='section-test-element'>
+        </qowt-section>
+    </qowt-page>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/pageHeight',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(PageHeight, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'page-height-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(QowtElement, PageHeight, api_));
+
+                return {};
+            });
+</script>

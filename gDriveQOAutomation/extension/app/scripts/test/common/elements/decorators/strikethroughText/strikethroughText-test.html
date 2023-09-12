@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="strikethrough-decorator-test-element" constructor="StrikethroughDecoratorTestElement"></dom-module>
+
+<template id="strikethrough-decorator-test-template">
+  <strikethrough-decorator-test-element id='testElement'></strikethrough-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/strikethroughText'], function(
+  MixinUtils,
+  QowtElement,
+  Strikethrough) {
+  'use strict';
+
+  var api_ = { is: 'strikethrough-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, Strikethrough, api_));
+
+  return {};
+});
+</script>

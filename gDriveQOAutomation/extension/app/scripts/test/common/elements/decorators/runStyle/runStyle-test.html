@@ -1,0 +1,25 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="run-style-decorator-test-element" constructor="RunStyleDecoratorTestElement"></dom-module>
+
+<template id="run-style-decorator-test-template">
+  <qowt-office-styles id="qowtOfficeStyles"></qowt-office-styles>
+  <run-style-decorator-test-element id='testElement'></run-style-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/runStyle'], function(
+  MixinUtils,
+  QowtElement,
+  RunStyleDecorator) {
+  'use strict';
+
+  var api_ = { is: 'run-style-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, RunStyleDecorator, api_));
+
+  return {};
+});
+</script>

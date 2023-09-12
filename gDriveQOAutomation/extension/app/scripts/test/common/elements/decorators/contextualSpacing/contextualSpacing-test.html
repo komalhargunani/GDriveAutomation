@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="contextual-spacing-decorator-test-element" constructor="ContextualSpacingDecoratorTestElement"></dom-module>
+
+<template id="contextual-spacing-decorator-test-template">
+  <contextual-spacing-decorator-test-element id='testElement'></contextual-spacing-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/contextualSpacing'], function(
+  MixinUtils,
+  QowtElement,
+  ContextualSpacing) {
+  'use strict';
+
+  var api_ = { is: 'contextual-spacing-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, ContextualSpacing, api_));
+
+  return {};
+});
+</script>

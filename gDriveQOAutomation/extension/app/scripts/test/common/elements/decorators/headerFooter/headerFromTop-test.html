@@ -1,0 +1,27 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="header-from-top-decorator-test-element">
+  <template>
+    <content></content>
+  </template>
+</dom-module>
+
+<template id="header-from-top-decorator-test-template">
+  <qowt-section id='section-test-element'>
+  </qowt-section>
+</template>
+
+<script>
+  require([
+    'common/mixins/decorators/headerFromTop',
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement'],
+      function(HeaderFromTop, MixinUtils, QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'header-from-top-decorator-test-element' };
+        Polymer(MixinUtils.mergeMixin(QowtElement, HeaderFromTop, api_));
+
+        return {};
+      });
+</script>

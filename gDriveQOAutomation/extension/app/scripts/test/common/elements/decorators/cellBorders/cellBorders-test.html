@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="cell-borders-decorator-test-element" constructor="CellBordersDecoratorTestElement"></dom-module>
+
+<template id="cell-borders-decorator-test-template">
+  <cell-borders-decorator-test-element id='testElement'></cell-borders-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/cellBorders'], function(
+  MixinUtils,
+  QowtElement,
+  CellBorders) {
+  'use strict';
+
+  var api_ = { is: 'cell-borders-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, CellBorders, api_));
+
+  return {};
+});
+</script>

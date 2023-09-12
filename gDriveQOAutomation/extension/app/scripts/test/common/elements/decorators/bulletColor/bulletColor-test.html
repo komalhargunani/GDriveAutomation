@@ -1,0 +1,58 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="bullet-color-test-element" constructor="BulletColorTestElement">
+    <template>
+        <style>
+  /* For follow rules */
+  :host:before {
+    @apply(--follow-bullet-style);
+  }
+
+  /* Bullet styling */
+  :host:before {
+    @apply(--bullet-style);
+  }
+
+  /* For auto bullets only - override some values */
+  :host(.list-type-buAuto):before {
+    @apply(--auto-bullet-style);
+  }
+        </style>
+        <content></content>
+    </template>
+</dom-module>
+
+
+<template id="bullet-color-test-template">
+    <style>
+        bullet-color-test-element:before{
+            color: rgb(123, 234, 213);
+        }
+    </style>
+    <bullet-color-test-element id='bullet-color-test-element'>
+    </bullet-color-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement',
+        'common/mixins/decorators/bulletColor',
+        'common/mixins/text/firstRunObserver'], function(
+            MixinUtils,
+            QowtElement,
+            BulletColorDecorator,
+            FirstRunObserver) {
+
+        'use strict';
+
+        var api_ = { is: 'bullet-color-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                BulletColorDecorator,
+                FirstRunObserver,
+                api_
+        ));
+        return {};
+    });
+</script>

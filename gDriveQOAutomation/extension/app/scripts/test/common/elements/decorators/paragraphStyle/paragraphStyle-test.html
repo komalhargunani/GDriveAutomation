@@ -1,0 +1,25 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="paragraph-style-decorator-test-element" constructor="ParagraphStyleDecoratorTestElement"></dom-module>
+
+<template id="paragraph-style-decorator-test-template">
+  <qowt-office-styles id="qowtOfficeStyles"></qowt-office-styles>
+  <paragraph-style-decorator-test-element id='testElement'></paragraph-style-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/paragraphStyle'], function(
+  MixinUtils,
+  QowtElement,
+  ParagraphStyle) {
+  'use strict';
+
+  var api_ = { is: 'paragraph-style-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, ParagraphStyle, api_));
+
+  return {};
+});
+</script>

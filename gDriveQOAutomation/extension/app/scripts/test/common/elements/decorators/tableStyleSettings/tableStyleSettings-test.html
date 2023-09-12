@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="table-style-settings-decorator-test-element" constructor="TableStyleSettingsDecoratorTestElement"></dom-module>
+
+<template id="table-style-settings-decorator-test-template">
+  <table-style-settings-decorator-test-element id='testElement'></table-style-settings-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/tableStyleSettings'], function(
+  MixinUtils,
+  QowtElement,
+  TableStyleSettings) {
+  'use strict';
+
+  var api_ = { is: 'table-style-settings-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, TableStyleSettings, api_));
+
+  return {};
+});
+</script>

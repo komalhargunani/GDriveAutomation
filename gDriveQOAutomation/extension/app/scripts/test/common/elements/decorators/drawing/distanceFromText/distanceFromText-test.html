@@ -1,0 +1,29 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="distance-from-text-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="distance-from-text-decorator-test-template">
+    <distance-from-text-decorator-test-element
+            id='distance-from-text-test-element'>
+    </distance-from-text-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/distanceFromText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(distanceFromText, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'distance-from-text-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(
+                        QowtElement, distanceFromText, api_));
+
+                return {};
+            });
+</script>

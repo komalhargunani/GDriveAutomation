@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="table-indent-decorator-test-element" constructor="TableIndentDecoratorTestElement"></dom-module>
+
+<template id="table-indent-decorator-test-template">
+  <table-indent-decorator-test-element id='testElement'></table-indent-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/tableIndent'], function(
+  MixinUtils,
+  QowtElement,
+  TableIndent) {
+  'use strict';
+
+  var api_ = { is: 'table-indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, TableIndent, api_));
+
+  return {};
+});
+</script>

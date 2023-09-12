@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="hanging-indent-decorator-test-element" constructor="HangingIndentDecoratorTestElement"></dom-module>
+
+<template id="hanging-indent-decorator-test-template">
+  <hanging-indent-decorator-test-element id='testElement'></hanging-indent-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/hangingIndent'], function(
+  MixinUtils,
+  QowtElement,
+  HangingIndent) {
+  'use strict';
+
+  var api_ = { is: 'hanging-indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, HangingIndent, api_));
+
+  return {};
+});
+</script>

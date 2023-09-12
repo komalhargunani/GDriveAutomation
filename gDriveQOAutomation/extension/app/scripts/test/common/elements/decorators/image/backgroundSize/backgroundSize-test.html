@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module name="image-background-size-decorator-test-element"
+            constructor="ImageBackgroundSizeDecoratorTestElement"></dom-module>
+
+<template id="image-background-size-decorator-test-template">
+  <image-background-size-decorator-test-element
+      id='testElement'></image-background-size-decorator-test-element>
+</template>
+
+<script>
+  require([
+    'common/mixins/decorators/backgroundSize',
+    'common/mixins/decorators/imageHeight',
+    'common/mixins/decorators/imageWidth',
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement'
+  ], function(BackgroundSize, ImageHeight, ImageWidth, MixinUtils, QowtElement
+  ) {
+
+    'use strict';
+
+    var _api = {is: 'image-background-size-decorator-test-element'};
+    Polymer(MixinUtils.mergeMixin(QowtElement, ImageHeight,
+        ImageWidth, BackgroundSize,  _api));
+
+    return {};
+  });
+</script>

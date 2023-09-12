@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="indent-decorator-test-element" constructor="IndentDecoratorTestElement">
+<template>
+    <style id='bulletStyle'></style><content></content>
+</template>
+</dom-module>
+
+<template id="indent-decorator-test-template">
+  <indent-decorator-test-element id='testElement'></indent-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/indent'], function(
+  MixinUtils,
+  QowtElement,
+  Indent) {
+  'use strict';
+
+  var api_ = { is: 'indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, Indent, api_));
+
+  return {};
+});
+</script>

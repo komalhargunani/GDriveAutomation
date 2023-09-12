@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="underline-decorator-test-element" constructor="UnderlineDecoratorTestElement"></dom-module>
+
+<template id="underline-decorator-test-template">
+  <underline-decorator-test-element id='testElement'></underline-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/underlineText'], function(
+  MixinUtils,
+  QowtElement,
+  Underline) {
+  'use strict';
+
+  var api_ = { is: 'underline-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, Underline, api_));
+
+  return {};
+});
+</script>

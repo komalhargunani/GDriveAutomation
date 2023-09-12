@@ -1,0 +1,30 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="horizontal-pos-offset-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="horizontal-pos-offset-decorator-test-template">
+    <horizontal-pos-offset-decorator-test-element
+            id='horizontal-pos-offset-test-element'>
+    </horizontal-pos-offset-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/horizontalPosOffset',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(HorizontalPosOffset, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = { is: 'horizontal-pos-offset-decorator-test-element' };
+
+          Polymer(MixinUtils.mergeMixin(
+              QowtElement, HorizontalPosOffset, api_));
+
+          return {};
+        });
+</script>

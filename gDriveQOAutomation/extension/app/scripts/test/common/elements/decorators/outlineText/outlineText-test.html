@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="outline-text-decorator-test-element" constructor="OutlineTextDecoratorTestElement"></dom-module>
+
+<template id="outline-text-decorator-test-template">
+  <outline-text-decorator-test-element id='testElement'></outline-text-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/outlineText'], function(
+  MixinUtils,
+  QowtElement,
+  OutlineText) {
+  'use strict';
+
+  var api_ = { is: 'outline-text-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, OutlineText, api_));
+
+  return {};
+});
+</script>

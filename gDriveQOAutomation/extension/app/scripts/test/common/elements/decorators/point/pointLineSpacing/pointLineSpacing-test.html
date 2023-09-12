@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="point-line-spacing-decorator-test-element"
+                 constructor="PointSpaceBeforeDecoratorTestElement">
+</dom-module>
+
+<template id="point-line-spacing-decorator-test-template">
+    <div lnSpcReduction="20">
+        <point-line-spacing-decorator-test-element id='testElement'>
+            <span is="qowt-run" style="font-size: 20pt;"></span>
+            <span is="qowt-run" style="font-size: 20pt;"></span>
+        </point-line-spacing-decorator-test-element>
+    </div>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/point/lineSpacing',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+         function(PointLineSpacing, MixinUtils, QowtElement) {
+            'use strict';
+
+            var api_ = { is: 'point-line-spacing-decorator-test-element' };
+            Polymer(MixinUtils.mergeMixin(PointLineSpacing, QowtElement, api_));
+
+            return {};
+         });
+</script>

@@ -1,0 +1,27 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="wrapping-style-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="wrapping-style-decorator-test-template">
+    <wrapping-style-decorator-test-element
+            id='wrapping-style-test-element'>
+    </wrapping-style-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/wrappingStyle',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(WrappingStyle, MixinUtils, QowtElement) {
+          'use strict';
+
+          var api_ = { is: 'wrapping-style-decorator-test-element' };
+          Polymer(MixinUtils.mergeMixin(QowtElement, WrappingStyle, api_));
+
+          return {};
+        });
+</script>

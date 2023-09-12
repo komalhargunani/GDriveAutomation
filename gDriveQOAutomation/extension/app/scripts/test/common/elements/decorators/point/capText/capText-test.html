@@ -1,0 +1,26 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="cap-text-decorator-test-element">
+</dom-module>
+
+<template id="cap-text-decorator-test-template">
+    <cap-text-decorator-test-element id='testElement'>
+    </cap-text-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/point/capText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(CapText, MixinUtils, QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'cap-text-decorator-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement, CapText, api_));
+
+        return {};
+    });
+</script>
+

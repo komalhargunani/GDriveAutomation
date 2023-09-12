@@ -1,0 +1,24 @@
+URL: https://github.com/downloads/pivotal/jasmine/jasmine-standalone-1.2.0.zip
+Version: 1.2.0 (b525313cdb8dd52aa86b32523b90cc30f9d4fc71)
+License: MIT
+License File: LICENSE
+
+Description:
+  JavaScript BDD style testing framework which supports describe, it should and
+  expect style testing.
+
+Local Modifications:
+
+  The Quickoffice project (acquired by Google) currently requires its own copy
+  of this library. A future CL is needed to remove duplicate dependencies and
+  use those existing in google3/third_party.
+
+  Log exceptions thrown in async functions.
+
+  Allow runs blocks in tests to return promises, and wait for those promises to
+  settle.
+
+  Replaced use of Promise.cast with Promise.resolve to validate promise-like
+  objects as the cast method has been removed.
+
+  Renamed jasmine-1.2.0.js as jasmine-1.2.0-patched.js

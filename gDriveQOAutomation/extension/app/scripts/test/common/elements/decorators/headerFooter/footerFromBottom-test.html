@@ -1,0 +1,27 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="footer-from-bottom-decorator-test-element">
+  <template>
+    <content></content>
+  </template>
+</dom-module>
+
+<template id="footer-from-bottom-decorator-test-template">
+  <qowt-section id='section-test-element'>
+  </qowt-section>
+</template>
+
+<script>
+  require([
+    'common/mixins/decorators/footerFromBottom',
+    'common/mixins/mixinUtils',
+    'common/mixins/qowtElement'],
+      function(FooterFromBottom, MixinUtils, QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'footer-from-bottom-decorator-test-element' };
+        Polymer(MixinUtils.mergeMixin(QowtElement, FooterFromBottom, api_));
+
+        return {};
+      });
+</script>

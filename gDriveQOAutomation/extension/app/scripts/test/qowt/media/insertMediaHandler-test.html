@@ -1,0 +1,15 @@
+<link rel="import" href="../../../third_party/polymer/polymer.html">
+<link rel="import" href="../../../common/elements/document/section/section.html">
+<link rel="import" href="../../../common/elements/document/msdoc/msdoc.html">
+<link rel="import" href="../../../common/elements/document/page/page.html">
+<link rel="import" href="../../../common/elements/text/para/word/wordPara.html">
+<link rel="import" href="../../../common/elements/text/run/run.html">
+
+<template id="insert-media-test-template">
+  <div id="container" style="height:1050px; width:1050px;">
+    <qowt-page id="page"></qowt-page>
+  </div>
+  <!--This element is here so that WidowOrphanHelper._unbalanceNodes()
+      doesn't break when trying to invoke msdoc.ignoreMutations(). -->
+  <qowt-msdoc></qowt-msdoc>
+</template>

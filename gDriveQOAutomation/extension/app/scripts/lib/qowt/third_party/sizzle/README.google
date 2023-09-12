@@ -1,0 +1,10 @@
+URL: http://github.com/jquery/sizzle/zipball/master
+Version: 1.10.19
+License: MIT
+License File: MIT-LICENSE.txt
+
+Description:
+  A pure-JavaScript CSS selector engine designed to be easily dropped in to a host library.
+
+Local Modifications:
+  None

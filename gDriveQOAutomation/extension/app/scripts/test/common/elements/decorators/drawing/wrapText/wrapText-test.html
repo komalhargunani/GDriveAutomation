@@ -1,0 +1,34 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="wrap-text-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="wrap-text-decorator-test-template">
+
+    <!-- If we place below tags on their own line then browser adds the
+    'newline' text node(#text) as first child and last child of
+    <wrap-text-decorator-test-element> element. But wrap text decorator expects
+    non text node as first child. Hence all these elements are written in single
+    line to avoid extra text node. -->
+    <wrap-text-decorator-test-element id='wrap-text-test-element'><qowt-text-box></qowt-text-box></wrap-text-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/horizontalPosOffset',
+        'common/mixins/decorators/drawing/wrapText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(HorizontalPosOffset, WrapText, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = { is: 'wrap-text-decorator-test-element' };
+          Polymer(MixinUtils.mergeMixin(
+              QowtElement, HorizontalPosOffset, WrapText, api_));
+
+          return {};
+        });
+</script>

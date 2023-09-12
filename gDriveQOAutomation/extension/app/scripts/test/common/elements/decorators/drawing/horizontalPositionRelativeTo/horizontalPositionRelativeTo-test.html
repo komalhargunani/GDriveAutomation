@@ -1,0 +1,31 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="horizontal-pos-relative-to-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="horizontal-pos-relative-to-decorator-test-template">
+    <horizontal-pos-relative-to-decorator-test-element
+            id='horizontal-pos-relative-to-test-element'>
+    </horizontal-pos-relative-to-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/horizontalPositionRelativeTo',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+        function(HorizontalPositionRelativeTo, MixinUtils, QowtElement) {
+
+          'use strict';
+
+          var api_ = {
+            is: 'horizontal-pos-relative-to-decorator-test-element'
+          };
+          Polymer(MixinUtils.mergeMixin(
+              QowtElement, HorizontalPositionRelativeTo, api_));
+
+          return {};
+        });
+</script>

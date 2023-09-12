@@ -1,0 +1,10 @@
+URL: https://raw.github.com/cowboy/javascript-hooker/v0.2.3/lib/hooker.js
+Version: 0.2.3 (96e3b30140ae2f4987af0f461acbc0a20b199f30)
+License: MIT (and GPL)
+License File: LICENSE
+
+Description:
+Node utility module to monkey-patch (hook) functions
+
+Local Modifications:
+Original commonJs module has been wrapped in a requireJs define function

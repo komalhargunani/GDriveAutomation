@@ -1,0 +1,28 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="relative-height-decorator-test-element">
+    <template>
+        <content></content>
+    </template>
+</dom-module>
+
+<template id="relative-height-decorator-test-template">
+    <relative-height-decorator-test-element id='relative-height-test-element'>
+    </relative-height-decorator-test-element>
+</template>
+
+<script>
+    require([
+        'common/mixins/decorators/drawing/relativeHeight',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'],
+            function(relativeHeight, MixinUtils, QowtElement) {
+
+                'use strict';
+
+                var api_ = { is: 'relative-height-decorator-test-element' };
+                Polymer(MixinUtils.mergeMixin(
+                        QowtElement, relativeHeight, api_));
+
+                return {};
+            });
+</script>

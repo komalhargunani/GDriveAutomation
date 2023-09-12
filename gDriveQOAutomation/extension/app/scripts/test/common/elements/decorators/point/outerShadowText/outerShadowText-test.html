@@ -1,0 +1,37 @@
+<link rel="import" href="../../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="outerShadow-test-element"
+                 constructor="OuterShadowTestElement">
+    <template>
+        <style id='outerShadowStyle'></style><content></content>
+    </template>
+</dom-module>
+
+
+<template id="outerShadow-test-template">
+    <outerShadow-test-element id='outerShadow-test-element'>
+    </outerShadow-test-element>
+</template>
+
+<script>
+
+    require([
+        'common/mixins/decorators/point/outerShadowText',
+        'common/mixins/mixinUtils',
+        'common/mixins/qowtElement'], function(
+            PointOuterShadowDecorator,
+            MixinUtils,
+            QowtElement) {
+
+        'use strict';
+
+        var api_ = { is: 'outerShadow-test-element' };
+        Polymer(MixinUtils.mergeMixin(
+                QowtElement,
+                PointOuterShadowDecorator,
+                api_
+        ));
+
+        return {};
+    });
+
+</script>

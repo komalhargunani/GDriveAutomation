@@ -1,0 +1,15 @@
+*** THE QUICKOFFICE PROJECT (ACQUIRED BY GOOGLE) CURRENTLY REQUIRES ITS OWN
+    COPY OF THIS LIBRARY. DO NOT DEPEND ON THIS PACKAGE. A FUTURE CL IS
+    NEEDED TO REMOVE DUPLICATE DEPENDENCIES AND USE THOSE EXISTING IN
+    GOOGLE3/THIRD_PARTY. ***
+
+URL: https://raw.github.com/requirejs/domReady/449478e133bd39ac043778fded3d9a8258be50ba/domReady.js
+Version: 2.0.1 (449478e133bd39ac043778fded3d9a8258be50ba)
+License: MIT (also dual-licensed BSD)
+License File: LICENSE
+
+Description:
+	An AMD loader plugin for detecting DOM ready. Known to work in RequireJS, but should work in other AMD loaders that support the same loader plugin API.
+
+Local Modifications:
+	None

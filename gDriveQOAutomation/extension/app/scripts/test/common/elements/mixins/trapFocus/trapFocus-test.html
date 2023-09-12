@@ -1,0 +1,38 @@
+
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="trap-focus-test-element"></dom-module>
+
+
+<template id="trap-focus-mixin-test-template">
+  <trap-focus-test-element id='testElement' trap-focus>
+    <button id='start' focus-start></button>
+    <button id='end' focus-end></button>
+  </trap-focus-test-element>
+  <trap-focus-test-element id='testElement2' trap-focus>
+    <button id='start2'></button>
+    <button id='end2' focus-end></button>
+  </trap-focus-test-element>
+</template>
+
+<script>
+
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/ui/trapFocus'], function(
+    MixinUtils,
+    QowtElement,
+    TrapFocus) {
+
+  'use strict';
+
+  window.TrapFocusTestElement = Polymer(MixinUtils.mergeMixin(
+    QowtElement,
+    TrapFocus,
+    { is: 'trap-focus-test-element' }
+  ));
+
+  return {};
+});
+
+</script>

@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="justify-button-test-element"></dom-module>
+
+<template id="justify-button-test-template">
+    <justify-button-test-element id='testElement'></justify-button-test-element>
+</template>
+
+<script>
+    require([
+        'common/elements/ui/justifyButtons/justifyButton/justifyButton'],
+            function() {
+        'use strict';
+
+        var api_ = {
+            is: 'justify-button-test-element',
+            behaviors: [ JustifyButtonBehavior ]
+        };
+
+        Polymer(api_);
+
+        return {};
+    });
+</script>

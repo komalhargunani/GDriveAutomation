@@ -1,0 +1,23 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="para-background-decorator-test-element" constructor="ParaBackgroundDecoratorTestElement"></dom-module>
+
+<template id="para-background-decorator-test-template">
+  <para-background-decorator-test-element id='testElement'></para-background-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/paragraphBackground'], function(
+  MixinUtils,
+  QowtElement,
+  ParagraphBackground) {
+  'use strict';
+
+  var api_ = { is: 'para-background-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(QowtElement, ParagraphBackground, api_));
+
+  return {};
+});
+</script>

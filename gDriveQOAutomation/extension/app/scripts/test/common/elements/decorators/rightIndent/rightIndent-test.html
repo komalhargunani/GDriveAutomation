@@ -1,0 +1,24 @@
+<link rel="import" href="../../../../../third_party/polymer/polymer.html"/>
+<dom-module id="right-indent-decorator-test-element" constructor="RightIndentDecoratorTestElement"></dom-module>
+
+<template id="right-indent-decorator-test-template">
+  <right-indent-decorator-test-element id='testElement'></right-indent-decorator-test-element>
+</template>
+
+<script>
+require([
+  'common/mixins/mixinUtils',
+  'common/mixins/qowtElement',
+  'common/mixins/decorators/rightIndent'], function(
+  MixinUtils,
+  QowtElement,
+  RightIndent) {
+  'use strict';
+
+  var api_ = { is: 'right-indent-decorator-test-element' };
+  Polymer(MixinUtils.mergeMixin(
+      QowtElement, RightIndent, api_));
+
+  return {};
+});
+</script>
